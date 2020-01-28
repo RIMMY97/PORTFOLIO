@@ -56,9 +56,12 @@ body {
 
 //::-webkit-scrollbar-button:start:decrement,::webkit-scrollbar-button:end:increment{width: 10px; height: 60px;}
 
+// scroll bar design
+
 .gird_wrap {
 
     div {
+        z-index: 100;
         width: 1px;
         height: 100vh;
         background-color: rgba(255, 26, 26, 0.5);
@@ -86,7 +89,7 @@ body {
     background-color: $point_color;
     top: 5vw;
     left: 4.7vw;
-    z-index: 200;
+    z-index: 999;
 
     h1 {
         text-align: center;
@@ -102,6 +105,7 @@ body {
     top: 6vw;
     right: 4.7vw;
     cursor: pointer;
+    z-index: 20;
 
     div {
         width: 33px;
@@ -115,74 +119,86 @@ body {
     }
 }
 
-.section {
+.Home {
     position: relative;
+    overflow: hidden;
     width: 100%;
-    height: 970px;
-    top: 18vw;
-    left: 16.1vw;
 
-    h1 {
-        font-size: 12rem;
-        font-family: $font_H;
-        color: $main_color;
-    }
-}
-
-.slide {
-    position: relative;
-
-    p {
-        font-size: 4rem;
-        font-family: $font_B;
-    }
-
-    .loop_txt {
-        position: absolute;
+    .title {
+        position: relative;
         width: 100%;
-        overflow: hidden;
-        transform: rotate(-5deg);
-        font-family: $font_H;
-        -webkit-text-stroke: 1px $main_color;
-        color: transparent;
+        height: 970px;
+        top: 18vw;
+        left: 16.1vw;
+        z-index: 20;
 
-        .txt {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
+        h1 {
+            font-size: 12rem;
+            font-family: $font_H;
+            color: $main_color;
+        }
+    }
+
+    .scroll_slide {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        padding: 30px 0 180px 0;
+
+        p {
             text-align: center;
-            overflow: hidden;
-
-            h1 {
-                font-size: 20rem;
-                width: calc();
-            }
+            font-size: 2.5rem;
+            font-family: $font_B;
         }
 
-        .publisher {
-            will-change: transform;
-            white-space: nowrap;
+        .loop_txt {
+            position: absolute;
+            width: 100%;
+            padding-top: 100px;
+            transform: rotate(-4deg);
+            font-family: $font_H;
+            -webkit-text-stroke: 1px $main_color;
+            color: transparent;
+            letter-spacing: 1rem;
 
-            h1 {
-                animation: loop_mirror 20s -10s linear infinite;
-                padding-right: 2vw;
+            .txt {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                overflow: hidden;
 
-                span {
-
-                    &:nth-of-type(2),
-                    &:nth-of-type(4) {
-                        color: $main_color;
-                    }
+                h1 {
+                    font-size: 20rem;
+                    width: calc();
                 }
             }
-        }
 
-        .create {
-            will-change: transform;
-            white-space: nowrap;
+            .create {
+                will-change: transform;
+                white-space: nowrap;
 
-            h1 {
-                animation: loop 40s -10s linear infinite;
+                h1 {
+                    animation: loop 17s -10s linear infinite;
+                }
+            }
+
+            .publisher {
+                will-change: transform;
+                white-space: nowrap;
+
+                h1 {
+                    animation: loop_mirror 10s -10s linear infinite;
+                    padding-right: 2vw;
+
+                    span {
+
+                        &:nth-of-type(2),
+                        &:nth-of-type(4) {
+                            color: $main_color;
+                        }
+                    }
+                }
             }
         }
     }
@@ -190,7 +206,7 @@ body {
 
 @keyframes loop {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
 
     to {
@@ -204,6 +220,131 @@ body {
     }
 
     to {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
+}
+
+// Home
+
+.content {
+    position: relative;
+    width: 100%;
+
+    .nav {
+        position: fixed;
+        top: 13vw;
+        left: 4.7vw;
+
+        li {
+            margin-bottom: 30px;
+
+            &.on {
+                margin-bottom: 500px;
+
+                a {
+                    color: $main_color;
+                }
+            }
+
+            &.on:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                font-size: 8rem;
+                color: transparent;
+                font-family: $font_H;
+                -webkit-text-stroke: 1px $main_color;
+            }
+        }
+    }
+
+    // nav
+
+    .section {
+        padding-left: 32.8vw;
+    }
+
+    #About {
+        height: 1200px;
+        background-color: rgba(144, 178, 248, 0.32);
+
+        .About_name01,
+        .About_name02 {
+            h3 {
+                position: absolute;
+                font-size: 12rem;
+                font-family: $font_H;
+            }
+        }
+
+        .About_name01 h3 {
+            top: 5%;
+            left: 45%;
+        }
+
+        .About_name02 h3 {
+            top: 8%;
+            left: 65%;
+        }
+
+        .About_name_outline {
+            h3 {
+                color: transparent;
+                -webkit-text-stroke: 1px #FFCA39;
+                z-index: 10;
+            }
+
+        }
+
+        .About_name_baseline {
+            h3 {
+                color: #FFCA39;
+                z-index: 5;
+            }
+        }
+
+        .About_circle {
+            position: absolute;
+            top: 3%;
+            left: 55%;
+            z-index: 7;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .About_txtarea {
+            font-size: 2rem;
+
+            .txtarea_wrap{
+                padding-top: 50%;
+                padding-left: 50%;
+                
+            span {
+                display: inline-block;
+                color: #A1A1A1;
+                font-family: $font_L;
+                margin-bottom: 25px;
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+                }
+        }
+    }
+
+    //About
+
+    #Work {
+        height: 1990px;
+    }
+
+    //Work
+
+    #Contact {
+        height: 970px;
+        background-color: #FFCE2E;
+    }
+
+    //Contact
 }
