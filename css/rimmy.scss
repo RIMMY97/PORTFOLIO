@@ -21,6 +21,11 @@
     src: url("../fonts/AppleSDGothicNeoL.ttf");
 }
 
+@font-face {
+    font-family: "AppleSDGothicNeoUL";
+    src: url("../fonts/AppleSDGothicNeoUL.ttf");
+}
+
 $main_color:#FF1A1A;
 $sub_color:#FFCA39;
 $point_color: #3B59EC;
@@ -28,6 +33,7 @@ $font_H: "AppleSDGothicNeoH";
 $font_B: "AppleSDGothicNeoB";
 $font_R: "AppleSDGothicNeoR";
 $font_L: "AppleSDGothicNeoL";
+$font_UL: "AppleSDGothicNeoUL";
 
 html {
     font-size: 10px;
@@ -119,7 +125,7 @@ body {
     }
 }
 
-.Home {
+.home {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -204,6 +210,8 @@ body {
     }
 }
 
+//home
+
 @keyframes loop {
     0% {
         transform: translateX(0);
@@ -224,7 +232,7 @@ body {
     }
 }
 
-// Home
+// home keyframes
 
 .content {
     position: relative;
@@ -234,6 +242,7 @@ body {
         position: fixed;
         top: 13vw;
         left: 4.7vw;
+        z-index: 20;
 
         li {
             margin-bottom: 30px;
@@ -262,15 +271,16 @@ body {
     // nav
 
     .section {
+        position: relative;
         padding-left: 32.8vw;
     }
 
-    #About {
-        height: 1200px;
-        background-color: rgba(144, 178, 248, 0.32);
+    #about {
+        height: 1000px;
+        background-color: rgba(171, 179, 215, 0.52);
 
-        .About_name01,
-        .About_name02 {
+        .about_name01,
+        .about_name02 {
             h3 {
                 position: absolute;
                 font-size: 12rem;
@@ -278,17 +288,17 @@ body {
             }
         }
 
-        .About_name01 h3 {
-            top: 5%;
+        .about_name01 h3 {
+            top: 20%;
             left: 45%;
         }
 
-        .About_name02 h3 {
-            top: 8%;
+        .about_name02 h3 {
+            top: 30%;
             left: 65%;
         }
 
-        .About_name_outline {
+        .about_name_outline {
             h3 {
                 color: transparent;
                 -webkit-text-stroke: 1px #FFCA39;
@@ -297,54 +307,144 @@ body {
 
         }
 
-        .About_name_baseline {
+        .about_name_baseline {
             h3 {
                 color: #FFCA39;
                 z-index: 5;
             }
         }
 
-        .About_circle {
+        .about_circle {
             position: absolute;
-            top: 3%;
+            top: 10%;
             left: 55%;
             z-index: 7;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+            .bounce {
+                animation: bounce 3s linear infinite;
+            }
         }
 
-        .About_txtarea {
+        .about_txtarea {
             font-size: 2rem;
 
-            .txtarea_wrap{
-                padding-top: 50%;
+            .txtarea_wrap {
+                padding-top: 43%;
                 padding-left: 50%;
-                
-            span {
-                display: inline-block;
-                color: #A1A1A1;
-                font-family: $font_L;
-                margin-bottom: 25px;
-            }
 
-            p {
-                margin-bottom: 15px;
-            }
+                span {
+                    display: inline-block;
+                    color: #494949;
+                    font-family: $font_UL;
+                    margin-bottom: 25px;
                 }
+
+                p {
+                    margin-bottom: 15px;
+                }
+            }
         }
     }
 
-    //About
+    //about
 
-    #Work {
-        height: 1990px;
+    #work {
+        height: 2500px;
+
+        .work_txtarea {
+            padding-top: 7.5vw;
+            padding-left: 4vw;
+
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: 3%;
+
+                    &.on {
+                        font-family: $font_B;
+                    }
+
+                    a {
+                        font-size: 2rem;
+                        font-family: $font_L;
+                    }
+                }
+            }
+        }
+
+        .work_pannel {
+            padding-top: 10%;
+
+            .work_scroll_view {
+                .work_list {
+                    &:nth-of-type(2){
+                        transform: matrix(1, 0, 0, 1, 0, 55);
+                    }
+                    
+                    a {
+                        color: #fff;
+                        .work_view {
+                            position: relative;
+                            float: left;
+                            width: 375px;
+                            height: 620px;
+                            background: url(../img/Work/sample.jpg) center/cover;
+                            margin-right: 2.3%;
+                            margin-bottom: 5%;
+                            z-index: 10;
+
+                            .category {
+                                position: absolute;
+                                text-align: right;
+                                font-size: 1.8rem;
+                                font-family: $font_L;
+                                line-height: 40px;
+                                top: 5%;
+                                right: 8%;
+
+                            }
+
+                            .title {
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                                font-size: 6rem;
+                                font-family: $font_B;
+                                text-align: center;
+                                width: 300px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    //Work
+    //work
 
-    #Contact {
+    #contact {
         height: 970px;
         background-color: #FFCE2E;
     }
 
-    //Contact
+    //contact
 }
+
+//content
+
+@keyframes bounce {
+    0% {
+        transform: translateY(20px)
+    }
+
+    50% {
+        transform: translateY(0px)
+    }
+
+    100% {
+        transform: translateY(20px)
+    }
+}
+
+//content keyframes
