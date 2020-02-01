@@ -41,6 +41,7 @@ html {
 
 body {
     font-family: $font_R;
+    letter-spacing: 0.02rem;
 }
 
 ::-webkit-scrollbar {
@@ -67,7 +68,7 @@ body {
 .gird_wrap {
 
     div {
-        z-index: 100;
+        z-index: 300;
         width: 1px;
         height: 100vh;
         background-color: rgba(255, 26, 26, 0.5);
@@ -95,7 +96,11 @@ body {
     background-color: $point_color;
     top: 5vw;
     left: 4.7vw;
-    z-index: 999;
+    z-index: 500;
+
+    &.nav_on {
+        background-color: #FF5E3D;
+    }
 
     h1 {
         text-align: center;
@@ -106,12 +111,32 @@ body {
     }
 }
 
+// logo 
+
+.util {
+    position: fixed;
+    z-index: 300;
+    right: 1.5%;
+    bottom: 5%;
+
+    ul {
+        li {
+            margin-bottom: 80px;
+
+            &:nth-of-type(3) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
+
 .menu {
     position: fixed;
     top: 6vw;
     right: 4.7vw;
     cursor: pointer;
-    z-index: 20;
+    z-index: 500;
 
     div {
         width: 33px;
@@ -125,6 +150,46 @@ body {
     }
 }
 
+.nav_wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $point_color;
+    z-index: 400;
+
+    nav {
+        width: 60%;
+        padding: 0 10%;
+        vertical-align: middle;
+        
+        ul {
+            li {
+                margin-bottom: 2%;
+
+                a {
+                    color: #fff;
+                    font-size: 8rem;
+                    font-family: $font_H;
+                }
+            }
+        }
+    }
+
+    .nav_util {
+        h3 {
+            font-size: 2.7rem;
+            font-family: $font_B;
+            color: #fff;
+
+            &:nth-child(1) {
+                color: $sub_color;
+            }
+        }
+    }
+}
+
+// menu
+
 .home {
     position: relative;
     overflow: hidden;
@@ -136,7 +201,7 @@ body {
         height: 970px;
         top: 18vw;
         left: 16.1vw;
-        z-index: 20;
+        z-index: 300;
 
         h1 {
             font-size: 12rem;
@@ -242,7 +307,7 @@ body {
         position: fixed;
         top: 13vw;
         left: 4.7vw;
-        z-index: 20;
+        z-index: 200;
 
         li {
             margin-bottom: 30px;
@@ -272,12 +337,12 @@ body {
 
     .section {
         position: relative;
-        padding-left: 32.8vw;
+        //        padding-left: 32.8vw;
+        padding-left: 33.1%;
     }
 
     #about {
         height: 1000px;
-        background-color: rgba(171, 179, 215, 0.52);
 
         .about_name01,
         .about_name02 {
@@ -302,7 +367,7 @@ body {
             h3 {
                 color: transparent;
                 -webkit-text-stroke: 1px #FFCA39;
-                z-index: 10;
+                z-index: 300;
             }
 
         }
@@ -318,7 +383,7 @@ body {
             position: absolute;
             top: 10%;
             left: 55%;
-            z-index: 7;
+            z-index: 200;
 
             .bounce {
                 animation: bounce 3s linear infinite;
@@ -359,14 +424,12 @@ body {
                 li {
                     display: inline-block;
                     margin-right: 3%;
+                    font-size: 2rem;
+                    font-family: $font_L;
+                    cursor: pointer;
 
                     &.on {
                         font-family: $font_B;
-                    }
-
-                    a {
-                        font-size: 2rem;
-                        font-family: $font_L;
                     }
                 }
             }
@@ -375,44 +438,50 @@ body {
         .work_pannel {
             padding-top: 10%;
 
-            .work_scroll_view {
-                .work_list {
-                    &:nth-of-type(2){
-                        transform: matrix(1, 0, 0, 1, 0, 55);
-                    }
-                    
-                    a {
-                        color: #fff;
-                        .work_view {
-                            position: relative;
-                            float: left;
-                            width: 375px;
-                            height: 620px;
-                            background: url(../img/Work/sample.jpg) center/cover;
-                            margin-right: 2.3%;
-                            margin-bottom: 5%;
-                            z-index: 10;
+            .work_inner {
 
-                            .category {
-                                position: absolute;
-                                text-align: right;
-                                font-size: 1.8rem;
-                                font-family: $font_L;
-                                line-height: 40px;
-                                top: 5%;
-                                right: 8%;
+                .work_scroll_view {
 
-                            }
+                    .work_list {
 
-                            .title {
-                                position: absolute;
-                                left: 50%;
-                                top: 50%;
-                                transform: translate(-50%, -50%);
-                                font-size: 6rem;
-                                font-family: $font_B;
-                                text-align: center;
-                                width: 300px;
+                        &:nth-of-type(2) {
+                            transform: matrix(1, 0, 0, 1, 0, 55);
+                        }
+
+                        a {
+                            color: #fff;
+
+                            .work_view {
+                                position: relative;
+                                float: left;
+                                width: 375px;
+                                height: 620px;
+                                background: url(../img/Work/sample.jpg) center/cover;
+                                margin-right: 2.3%;
+                                margin-bottom: 5%;
+                                z-index: 100;
+
+                                .category {
+                                    position: absolute;
+                                    text-align: right;
+                                    font-size: 1.8rem;
+                                    font-family: $font_L;
+                                    line-height: 40px;
+                                    top: 5%;
+                                    right: 8%;
+
+                                }
+
+                                .title {
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    font-size: 6rem;
+                                    font-family: $font_B;
+                                    text-align: center;
+                                    width: 300px;
+                                }
                             }
                         }
                     }
@@ -426,6 +495,80 @@ body {
     #contact {
         height: 970px;
         background-color: #FFCE2E;
+
+        img {
+            position: absolute;
+            left: 61%;
+            top: 18%;
+        }
+
+        form {
+            position: absolute;
+            top: 38%;
+            left: 45.5%;
+            float: left;
+            width: 720px;
+            overflow: hidden;
+
+            input {
+                background-color: rgba(255, 255, 255, 0.54);
+                box-sizing: border-box;
+                border: none;
+                font-size: 2.2rem;
+                font-family: $font_B;
+                height: 50px;
+                margin-bottom: 3%;
+                padding: 0 15px;
+
+                &::placeholder {
+                    color: #FF570C;
+                }
+            }
+
+            #name {
+                width: 260px;
+                margin-right: 50px;
+                float: left;
+            }
+
+            #mail {
+                width: 410px;
+                float: left;
+            }
+
+            #submit {
+                width: 100%;
+                height: 250px;
+                padding: 20px 15px;
+                background-color: rgba(255, 255, 255, 0.54);
+                border: none;
+                margin-bottom: 3%;
+                font-size: 2.2rem;
+                font-family: $font_B;
+                color: #FF570C;
+
+                &::placeholder {
+                    color: #FF570C;
+                }
+            }
+
+            #send {
+                width: 250px;
+                color: #FF570C;
+                text-align: left;
+            }
+        }
+
+        .copy {
+            position: absolute;
+            left: 45.5%;
+            bottom: 3%;
+
+            p {
+                font-size: 1.8rem;
+                font-family: $font_UL;
+            }
+        }
     }
 
     //contact
@@ -447,4 +590,4 @@ body {
     }
 }
 
-//content keyframes
+//about keyframes

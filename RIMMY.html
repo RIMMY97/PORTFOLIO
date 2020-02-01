@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RIMMY</title>
-    <link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="res/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/rimmy.css">
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/RIMMY.js"></script>
+    <title>portfolio</title>
+    <link rel="shortcut icon" href="./res/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/rimmy.css">
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!--
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+-->
+    <!--    <script src="js/RIMMY.js"></script>-->
 </head>
 
 <body>
@@ -22,13 +26,39 @@
             <h1>RM</h1>
         </a>
     </div>
+
+    <div class="util">
+        <ul>
+            <li><a href="https://open.kakao.com/o/sjI2O7Sb" target="_blank"><img src="./img/util/kakao.png" alt="util"></a></li>
+            <li> <a href="https://github.com/RIMMY97" target="_blank"><img src="./img/util/github.png" alt="util"></a></li>
+            <li> <a href="#contact"><img src="./img/util/mail.png" alt="util"></a></li>
+        </ul>
+    </div>
+
     <div class="menu">
         <div></div>
         <div></div>
         <div></div>
     </div>
 
-    <!--    -->
+    <div class="nav_wrap">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav_util">
+            <h3>Contact RM</h3>
+            <h3>Phone:010 7410 9435</h3>
+            <h3>E-mail:rimmy97@naver.com</h3>
+            <a href="https://open.kakao.com/o/sjI2O7Sb"><img src="./img/util/kakao.png" alt="util"></a>
+            <a href="https://github.com/RIMMY97"><img src="./img/util/github.png" alt="util"></a>
+        </div>
+    </div>
+
+    <!--    menu-->
 
     <div class="home">
         <div class="title">
@@ -52,7 +82,7 @@
         </div>
     </div>
 
-    <!--    Home-->
+    <!--    home-->
 
     <div class="content">
         <div class="nav">
@@ -89,7 +119,7 @@
                     <p>김유림</p>
                     <p>1997 06 15</p>
                     <span>Education / Experience</span>
-                    <p>2019 - 2020 그린컴퓨터디자인 학원 디지털디자인 이수(800H)</p>
+                    <p>2019 - 2020 그린컴퓨터디자인 학원 디지털디자인 수료예정(800H)</p>
                     <p>2016 - 2018 영진전문대학 디지털 콘텐츠 졸업</p>
                     <span>Skills</span>
                     <p></p>
@@ -103,106 +133,119 @@
         <div class="section" id="work">
             <div class="work_txtarea">
                 <ul>
-                    <li><a href="">ALL</a></li>
-                    <li><a href="">웹/앱</a></li>
-                    <li><a href="">디자인</a></li>
+                    <li data-filter="*">ALL</li>
+                    <li data-filter="#web">웹/앱</li>
+                    <li data-filter="#design">디자인</li>
                 </ul>
             </div>
             <div class="work_pannel">
-                <div class="work_scroll_view">
-                    <div class="work_list">
-                        <a href="">
-                            <div class="work_view">
-                                <p class="category">
-                                    2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
-                                </p>
-                                <h2 class="title">
-                                    서울우유
-                                </h2>
-                            </div>
-                        </a>
+                <div class="work_inner">
+                    <div class="work_scroll_view">
+                        <div class="work_list" id="web">
+                            <a href="">
+                                <div class="work_view">
+                                    <p class="category">
+                                        2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
+                                    </p>
+                                    <h2 class="title">
+                                        서울우유
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="work_list" id="design">
+                            <a href="">
+                                <div class="work_view">
+                                    <p class="category">
+                                        2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
+                                    </p>
+                                    <h2 class="title">
+                                        서울우유
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="work_list" id="web">
+                            <a href="">
+                                <div class="work_view">
+                                    <p class="category">
+                                        2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
+                                    </p>
+                                    <h2 class="title">
+                                        서울우유
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="work_list">
-                        <a href="">
-                            <div class="work_view">
-                                <p class="category">
-                                    2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
-                                </p>
-                                <h2 class="title">
-                                    서울우유
-                                </h2>
-                            </div>
-                        </a>
+                    <div class="work_scroll_view">
+                        <div class="work_list" id="web">
+                            <a href="">
+                                <div class="work_view">
+                                    <p class="category">
+                                        2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
+                                    </p>
+                                    <h2 class="title">
+                                        서울우유
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="work_list" id="design">
+                            <a href="">
+                                <div class="work_view">
+                                    <p class="category">
+                                        2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
+                                    </p>
+                                    <h2 class="title">
+                                        서울우유
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="work_list" id="web">
+                            <a href="">
+                                <div class="work_view">
+                                    <p class="category">
+                                        2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
+                                    </p>
+                                    <h2 class="title">
+                                        서울우유
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="work_list">
-                        <a href="">
-                            <div class="work_view">
-                                <p class="category">
-                                    2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
-                                </p>
-                                <h2 class="title">
-                                    서울우유
-                                </h2>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="work_scroll_view">
-                    <div class="work_list">
-                        <a href="">
-                            <div class="work_view">
-                                <p class="category">
-                                    2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
-                                </p>
-                                <h2 class="title">
-                                    서울우유
-                                </h2>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="work_list">
-                        <a href="">
-                            <div class="work_view">
-                                <p class="category">
-                                    2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
-                                </p>
-                                <h2 class="title">
-                                    서울우유
-                                </h2>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="work_list">
-                        <a href="">
-                            <div class="work_view">
-                                <p class="category">
-                                    2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
-                                </p>
-                                <h2 class="title">
-                                    서울우유
-                                </h2>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="work_scroll_view">
-                    <div class="work_list">
-                        <a href="">
-                            <div class="work_view">
-                                <p class="category">
-                                    2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
-                                </p>
-                                <h2 class="title">
-                                    서울우유
-                                </h2>
-                            </div>
-                        </a>
+                    <div class="work_scroll_view">
+                        <div class="work_list" id="web">
+                            <a href="">
+                                <div class="work_view">
+                                    <p class="category">
+                                        2019<br>반응형 웹사이트<br>서브 페이지<br>상세페이지
+                                    </p>
+                                    <h2 class="title">
+                                        서울우유
+                                    </h2>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--        work-->
-        <div class="section" id="contact"></div>
+        <div class="section" id="contact">
+            <img src="./img/contact/QR.png" alt="">
+            <form action="https://formspree.io/rimmy97@naver.com" method="POST">
+                <input id="name" type="text" name="name" placeholder="NAME">
+                <input id="mail" type="email" name="_replyto" placeholder="E-MAIL">
+                <textarea id="submit" name="textarea" placeholder="MESSAGE"></textarea>
+                <input id="send" type="submit" value="SEND">
+            </form>
+            <div class="copy">
+                <p>© KIMYURIM. All Rights Reserved.</p>
+            </div>
+        </div>
         <!--        contact-->
     </div>
 </body></html>
