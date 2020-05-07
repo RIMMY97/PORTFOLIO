@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "AppleSDGothicNeoH";
+    src: url("../fonts/AppleSDGothicNeoH.ttf");
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoB";
+    src: url("../fonts/AppleSDGothicNeoB.ttf");
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoM";
+    src: url("../fonts/AppleSDGothicNeoM.ttf");
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoR";
+    src: url("../fonts/AppleSDGothicNeoR.ttf");
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoL";
+    src: url("../fonts/AppleSDGothicNeoL.ttf");
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoUL";
+    src: url("../fonts/AppleSDGothicNeoUL.ttf");
+}
+
+/*font*/
+
+::-webkit-scrollbar {
+    width: 17px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #CBCFE8;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #858EC5;
+}
+
+/*scroll-bar*/
+
+@keyframes loop {
+    0% {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes loop_mirror {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(20px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+/*keyframes*/
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/*modal keyframes*/

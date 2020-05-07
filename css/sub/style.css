@@ -1,0 +1,44 @@
+html, body { font-family: "AppleSDGothicNeoR"; width: 100%; }
+
+#rotaction {margin: 0%; z-index: 200; }
+#rotaction #circle { position: fixed; width: 100%; padding-bottom: 100%; overflow: hidden; }
+#rotaction #circle text { font-size: 16px; }
+#rotaction #circle svg { position: absolute; right: 4vw; top: 3vw; height: 300px; animation-name: rotate; animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: linear; }
+
+@-webkit-keyframes rotate { from { -webkit-transform: rotate(360deg); }
+  to { -webkit-transform: rotate(0); } }
+@-moz-keyframes rotate { from { -moz-transform: rotate(360deg); }
+  to { -moz-transform: rotate(0); } }
+@-ms-keyframes rotate { from { -ms-transform: rotate(360deg); }
+  to { -ms-transform: rotate(0); } }
+@-o-keyframes rotate { from { -o-transform: rotate(360deg); }
+  to { -o-transform: rotate(0); } }
+@keyframes rotate { from { transform: rotate(360deg); }
+  to { transform: rotate(0); } }
+
+section { position: relative; width: 100%; height: 700px; letter-spacing: 0.02rem; }
+section .title { max-width: 1420px; height: 100%; margin: 0 auto; color: #fff; font-size: 0; transition: 0.3s; }
+section .title #title_wrap { position: absolute; top: 50%; transform: translateY(-50%); }
+section .title h1 { font-size: 70px; font-family: "AppleSDGothicNeoB"; margin-bottom: 30px; }
+section .title h2 { font-size: 20px; font-family: "AppleSDGothicNeoM"; margin-bottom: 10px; }
+section .title a { color: #fff; font-size: 18px; background: #FFB639; padding: 10px 20px; margin-right: 20px; }
+section .title a img { margin-left: 20px; }
+
+.guide { position: relative; width: 100%; max-width: 1200px; margin: 0 auto; }
+.guide #concept #title, .guide #style_guide #title { position: relative; }
+.guide #concept #title h3, .guide #style_guide #title h3 { color: #3B59EC; font-size: 40px; font-family: "AppleSDGothicNeoB"; margin: 80px 0 30px 0; }
+.guide #concept #txt p { font-size: 20px; line-height: 40px; }
+.guide #style_guide { position: relative; }
+.guide #style_guide #title ul { position: relative; width: 100%; }
+.guide #style_guide #title ul li { font-family: "AppleSDGothicNeoB"; font-size: 20px; margin-bottom: 50px; }
+.guide #style_guide #title ul li #font {color: #777777; font-weight: 300; }
+.guide #style_guide #title ul li #font strong { font-weight: bold; font-size: 40px; }
+.guide #style_guide #title ul li p { font-family: "AppleSDGothicNeoR"; margin-left: 14vw; line-height: 40px;}
+.guide #style_guide #title #color { position: absolute; left: 50%; transform: translateX(-50%); }
+.guide #style_guide #title #color ul { display: flex; }
+.guide #style_guide #title #color ul > li { text-align: center; line-height: 180px; width: 180px; height: 180px; font-size: 26px; border-radius: 20px; margin-right: 35px; box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); color: #fff; }
+
+.detail { max-width: 1420px; margin: 0 auto; font-size: 0; margin-top: 300px; }
+.detail img { width: 100%; margin-bottom: 100px; }
+
+/*# sourceMappingURL=seoulmilk.css.map */

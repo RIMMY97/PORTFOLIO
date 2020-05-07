@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+@media screen and (max-width: 1400px) {
+    section .title {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #rotaction {
+        display: none;
+    }
+
+    section .title {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    section .title #title_wrap h1 {
+        font-size: 50px;
+    }
+
+    section .title #title_wrap h2 {
+        font-size: 18px;
+    }
+
+    section .title #title_wrap a {
+        font-size: 14px;
+        float: left;
+        margin-bottom: 20px;
+    }
+
+    .guide {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .guide #concept #title h3,
+    .guide #style_guide #title h3 {
+        font-size: 30px;
+    }
+
+    .guide #concept #txt p {
+        font-size: 20px;
+    }
+
+    .guide #style_guide #title ul li #font strong {
+        font-size: 20px;
+    }
+
+    .guide #style_guide #title ul li p {
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    .guide #style_guide #title #color ul li {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+        line-height: 80px;
+        margin-bottom: 30px;
+        font-size: 14px;
+    }
+
+    .detail {
+        margin-top: 200px;
+    }
+
+    .detail img {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,16 @@
+.spot {position: relative; background: url(../../img/product/bg_spot.jpg) center/cover fixed; width: 100%; height: 285px; font-family: 'Nanum Pen Script', cursive; }
+.spot span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 52px; letter-spacing: 0.02rem; color: #fff; }
+
+.selection {position: relative; width: 100%; height: 54px; margin-bottom: 90px; background-color: #ECECEC; }
+.selection .sel_wrap { width: 1250px; margin: 0 auto; height: 100%; }
+.selection .sel_wrap .location > li { position: relative; float: left; font-size: 16px; line-height: 54px; padding: 0 30px; font-weight: 500; }
+.selection .sel_wrap .location > li::before { content: ''; position: absolute; display: block; top: 10px; left: 0px; width: 1px; height: 35px; background: #707070; }
+.selection .sel_wrap .location > li:nth-child(1)::before { content: ""; background-color: transparent; }
+.selection .sel_wrap .location > li.on { color: #119F37; }
+.selection .sel_wrap .location > li img { margin-top: 13px; width: 26px; height: 26px; }
+.selection .sel_wrap .location > li .sel_dept.on { color: #119F37; }
+.selection .sel_wrap .location > li .sel_dept span:nth-of-type(2) { font-size: 4px; }
+.selection .sel_wrap .location > li > ul { position: absolute; top: 54px; left: 0; width: 100%; background-color: #fff; border: 1px solid #B8B8B8; z-index: 10; }
+.selection .sel_wrap .location > li > ul > li { display: inherit; font-size: 14px; line-height: 45px; font-weight: 400; padding: 0 30px 0 15px; border-bottom: 1px solid #B8B8B8; }
+.selection .sel_wrap .location > li > ul > li:hover { background-color: #D9D9D9; }
+.selection .sel_wrap .location > li > ul > li:last-child { border: none; }

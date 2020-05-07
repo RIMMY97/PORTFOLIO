@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>개인카드 - 우리카드</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="res/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/wooricard.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/wooricard.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="bg"></div>
+        <div class="util">
+            <div id="util_wrap">
+                <ul id="u_custom">
+                    <li><a href="#">개인</a></li>
+                    <li><a href="#">기업</a></li>
+                </ul>
+                <ul id="u_list">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">상품공시실</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--        line nav-->
+        <nav>
+            <h1>
+                <a href="#"></a>
+            </h1>
+            <ul id="b_1dep">
+                <li>
+                    나의카드
+                    <ul id="b_2dep">
+                        <li>
+                            개인/카드 정보
+                            <ul>
+                                <li>보유카드조회</li>
+                                <li>회원정보변경</li>
+                                <li>결제정보변경</li>
+                                <li>분실신고재발급/해지</li>
+                                <li>수수료율조회</li>
+                                <li>휴면카드조회/해제</li>
+                                <li>해외사용등록/해제</li>
+                                <li>증명서 조회 및 발급</li>
+                            </ul>
+                        </li>
+                        <li>
+                            카드이용조회
+                            <ul>
+                                <li>이용대금명세서조회</li>
+                                <li>결제예상금액조회</li>
+                                <li>카드이용내역(전표조회)</li>
+                                <li>교통/하이패스이용내역조회</li>
+                                <li>실적충족내역조회</li>
+                                <li>통합 혜택 조회</li>
+                            </ul>
+                        </li>
+                        <li>
+                            이용한도
+                            <ul>
+                                <li>이용한도조회</li>
+                                <li>한도상향가능조회/신청</li>
+                                <li>한도하향신청</li>
+                                <li>한도변경취소</li>
+                                <li>체크카드한도변경</li>
+                                <li>투인원결제신청/해지</li>
+                            </ul>
+                        </li>
+                        <li>
+                            이용금액결제
+                            <ul>
+                                <li>선결제신청/내역조회</li>
+                                <li>결제일즉시출금신청</li>
+                                <li>연체금액조회/결제</li>
+                                <li>결제내역조회</li>
+                                <li>가상계자조회</li>
+                            </ul>
+                        </li>
+                        <li>
+                            우리V클럽
+                            <ul>
+                                <li>우리V클럽서비스</li>
+                                <li>우리V클럽안내</li>
+                                <li>나의등급/혜택</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    카드
+                    <ul id="b_2dep">
+                        <li>
+                            카드신청
+                            <ul>
+                                <li>VVIP카드</li>
+                                <li>프리미엄카드</li>
+                                <li>카드의정석</li>
+                                <li>할인카드</li>
+                                <li>포인트카드</li>
+                                <li>혜택카드</li>
+                                <li>체크카드</li>
+                                <li>모바일카드</li>
+                                <li>선불카드</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div id="li_t">
+                                간편신청
+                            </div>
+                            <div id="li_b">
+                                빠른신청
+                            </div>
+                        </li>
+                        <li>
+                            기프트(바우처)신청/조회
+                            <ul>
+                                <li>이용안내</li>
+                                <li>기프트(바우처)신청</li>
+                                <li>기프트(바우처)변경/취소</li>
+                                <li>신청내역조회</li>
+                                <li>연회비 선납</li>
+                            </ul>
+                        </li>
+                        <li>
+                            발급안내/신청결과조회
+                            <ul>
+                                <li>발급신청안내</li>
+                                <li>카드신청결과조회</li>
+                                <li>카드발급신청취소</li>
+                                <li>카드배송지변경</li>
+                                <li>체크카드 비밀번호 예약등록서비스</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    금융
+                    <ul id="b_2dep">
+                        <li>
+                            단기카드대출<br>(현금서비스)
+                            <ul>
+                                <li>이용안내</li>
+                                <li>서비스한도잔액조회</li>
+                                <li>서비스이체</li>
+                                <li>이용내역조회</li>
+                            </ul>
+                        </li>
+                        <li>
+                            장기카드대출<br>(카드론)
+                            <ul>
+                                <li>이용안내 및 상품안내</li>
+                                <li>이용가능금액조회</li>
+                                <li>이용신청</li>
+                                <li>이용내역조회</li>
+                                <li>원리금납일예정조회</li>
+                                <li>이용 동의/거절</li>
+                                <li>조건변경서비스</li>
+                                <li>대출계약 철회신청/내역조회</li>
+                                <li>만기연장 신청/조회</li>
+                            </ul>
+                        </li>
+                        <li>
+                            일부결제금액이월약정<br>(리볼빙)
+                            <ul>
+                                <li>이용안내</li>
+                                <li>대출신청</li>
+                                <li>회원정보 조회/변경</li>
+                                <li>이용내역조회</li>
+                                <li>리볼빙체험하기</li>
+                            </ul>
+                        </li>
+                        <li>
+                            올인원대출/신용대출
+                            <ul>
+                                <li>이용안내</li>
+                                <li>대출신청</li>
+                                <li>상담예약</li>
+                                <li>대출현황/상환신청</li>
+                                <li>대출계약철회신청</li>
+                            </ul>
+                        </li>
+                        <li>
+                            플러스서비스
+                            <ul>
+                                <li>우리오토플러스</li>
+                                <li>부동산안심서비스</li>
+                                <li>카드안심서비스</li>
+                                <li>신용안심플러스</li>
+                                <li>신용안심서비스</li>
+                                <li>쇼핑안심서비스</li>
+                                <li>결제알림</li>
+                                <li>일반결제(ISP/paybooc)</li>
+                                <li>해외전자상거래인증서비스</li>
+                            </ul>
+                        </li>
+                        <li>
+                            금리인하요구권
+                            <ul>
+                                <li>장기카드대출</li>
+                                <li>단기카드대출</li>
+                                <li>일부결제금액이월약정</li>
+                                <li>올인원대출/신용대출</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    포인트
+                    <ul id="b_2dep">
+                        <li>
+                            나의포인트
+                            <ul>
+                                <li>조회</li>
+                                <li>전환(캐시백/계좌입금)</li>
+                                <li>충전</li>
+                            </ul>
+                        </li>
+                        <li>
+                            포인트안내
+                            <ul>
+                                <li>위비꿀머니(모아포인트)안내</li>
+                                <li>꿀머니적립/사용방법</li>
+                            </ul>
+                        </li>
+                        <li>
+                            위비꿀머니(모아포인트)<br>사용처
+                        </li>
+                        <li>
+                            포인트연계할부(세이브)
+                            <ul>
+                                <li>안내</li>
+                                <li>신청</li>
+                                <li>조회</li>
+                                <li>취소</li>
+                            </ul>
+                        </li>
+                        <li>
+                            포인트기부
+                            <ul>
+                                <li>안내</li>
+                                <li>참여</li>
+                                <li>내역</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    라이프
+                    <ul id="b_2dep">
+                        <li>
+                            생활서비스
+                            <ul>
+                                <li>항공/여행</li>
+                                <li>골프</li>
+                                <li>웨딩</li>
+                                <li>반려동물</li>
+                                <li>렌탈</li>
+                                <li>리빙</li>
+                            </ul>
+                        </li>
+                        <li>
+                            해외이용
+                            <ul>
+                                <li>해외이용종합안내</li>
+                            </ul>
+                        </li>
+                        <li>
+                            자동납부서비스
+                            <ul>
+                                <li>이용안내</li>
+                                <li>자동납부 통합 조회</li>
+                                <li>아파트관리비</li>
+                                <li>임대료</li>
+                                <li>전기요금</li>
+                                <li>가스요금</li>
+                                <li>4대사회보험료</li>
+                                <li>초중고 학부모부담금</li>
+                                <li>대학등록금</li>
+                                <li>지방세</li>
+                                <li>국세</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    모바일
+                    <ul id="b_2dep">
+                        <li>
+                            우리페이
+                            <ul>
+                                <li>우리페이소개</li>
+                                <li>이용안내</li>
+                                <li>더치페이 서비스</li>
+                                <li>더치페이 이용안내</li>
+                            </ul>
+                        </li>
+                        <li>
+                            스마트앱
+                            <ul>
+                                <li>이용안내</li>
+                                <li>O2O서비스</li>
+                                <li>IC칩비밀번호(PIN)등록</li>
+                                <li>스마트폰금융거래10계명</li>
+                            </ul>
+                        </li>
+                        <li>
+                            결제/인증
+                            <ul>
+                                <li>일반결제</li>
+                                <li>SMS결제</li>
+                                <li>스마일페이</li>
+                                <li>카드터칭</li>
+                            </ul>
+                        </li>
+                        <li>
+                            스마트폰인증서복사
+                            <ul>
+                                <li>인증번호 복사</li>
+                                <li>QR코드 복사</li>
+                            </ul>
+                        </li>
+                        <li>
+                            NHN
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    고객센터
+                    <ul id="b_2dep">
+                        <li>
+                            이벤트/공지사항
+                            <ul>
+                                <li>진행중인 이벤트</li>
+                                <li>지난이벤트</li>
+                                <li>응모중인이벤트</li>
+                                <li>당첨자조회</li>
+                                <li>새소식</li>
+                                <li>보도자료</li>
+                                <li>공고</li>
+                            </ul>
+                        </li>
+                        <li>
+                            고객센터
+                            <ul>
+                                <li>고객상담센터</li>
+                                <li>신용카드불법모집신고</li>
+                                <li>ARS상담</li>
+                                <li>챗봇상담</li>
+                                <li>보안서비스</li>
+                            </ul>
+                        </li>
+                        <li>
+                            소비자포털
+                            <ul>
+                                <li>이용안내</li>
+                                <li>민원</li>
+                                <li>고객의소리</li>
+                            </ul>
+                        </li>
+                        <li>
+                            홈페이지이용안내
+                            <ul>
+                                <li>웹접근성안내</li>
+                            </ul>
+                        </li>
+                        <li>
+                            상품공시실
+                        </li>
+                    </ul>
+                </li>
+                <li id="b_menu"></li>
+            </ul>
+        </nav>
+        <!--        nav-->
+    </header>
+    <!--    header-->
+    <div class="container">
+        <div class="slide_banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide item_01">
+                        <div id="title">
+                            <div id="title_wrapper">
+                                <h2>
+                                    아파트 관리비 할인 혜택을 담다!<br>
+                                    <strong>카드 쓰고 벤츠 타다</strong>
+                                </h2>
+                                <p>"카드의 정석 APT"<br>카드 사용하고 벤츠 타자!</p>
+                                <button>자세히 보기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide item_02">
+                        <div id="title">
+                            <div id="title_wrapper">
+                                <h2>
+                                    20대 고객을 위한 WOORI의 이벤트<br>
+                                    <strong>20대를 위한 봄 사랑</strong>
+                                </h2>
+                                <p>채크카드 발급한 후 누적 10만원 이상 사용한<br>20대 고객에게 우리카드 노트북 부터 치킨까지 쏩니다!</p>
+                                <button>자세히 보기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide item_03">
+                        <div id="title">
+                            <div id="title_wrapper">
+                                <h2>
+                                    우리카드X우리종합금융<br>
+                                    <strong>드림정기적금 최대 연 8.0%!</strong>
+                                </h2>
+                                <p>우리 CMA 체크카드 이용하면<br>우리종금 더 드림「정기적금 최고금리」연8%!</p>
+                                <button>자세히 보기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+            </div>
+            <div id="more">
+                <a href="#">
+                    <span>진행중인 이벤트 +</span>
+                </a>
+            </div>
+            <div id="login">
+                <form>
+                    <fieldset>
+                        <ul>
+                            <li>아이디</li>
+                            <li>공인인증서</li>
+                        </ul>
+                        <label for="id">
+                            <input id="id" type="text" placeholder="아이디">
+                        </label>
+                        <label for="pass">
+                            <input id="pass" type="password" placeholder="비밀번호">
+                        </label>
+                        <p id="security">
+                            <input type="checkbox" id="member_check">
+                            <label for="member_check">아이디 저장하기</label>
+                        </p>
+                        <a href="#"><button>로그인</button></a>
+                        <div id="member">
+                            <a href="#" id="find"><span>아이디/비밀번호 찾기</span></a>
+                            <a href="#" id="sign_up"><span>회원가입</span></a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <!--        main-->
+        <div class="quick_menu">
+            <ul>
+                <li>
+                    <a href="#" id="card">
+                        <span>카드신청</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="use">
+                        <span>카드사용등록</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="spec">
+                        <span>이용대금명세서</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="limit">
+                        <span>이용한도</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="pay">
+                        <span>결제예정금액</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="ok">
+                        <span>승인내역</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="pre">
+                        <span>선결제</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--       quick_menu-->
+        <div class="gray_box">
+            <div class="card">
+                <a href="#">카드안내·신청<img src="img/btn_arrow.png" alt="arrow"></a>
+                <div id="card_slide">
+                    <div class="imgs_wrap">
+                        <ul>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_01.png" alt="카드"></a>
+                                    <span>CJ ONE<br>체크</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_02.png" alt="카드"></a>
+                                    <span>카드의정석APT<br>PLATINUM</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_03.png" alt="카드"></a>
+                                    <span>카드의정석POINT</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_04.png" alt="카드"></a>
+                                    <span>카드의정석<br>체크</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_05.png" alt="카드"></a>
+                                    <span>카드의정석APT</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_06.png" alt="카드"></a>
+                                    <span>카드의정석<br>L.POINT</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_07.png" alt="카드"></a>
+                                    <span>카드의정석<br>DISCOUNT</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_08.png" alt="카드"></a>
+                                    <span>아이파킹<br>크레딧 카</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn_prev"></div>
+                    <div class="btn_next"></div>
+                    <div id="sel_box">
+                        <a href="#">내게 맞는 카드 찾기</a>
+                        <a href="#">카드 발급조회</a>
+                        <a href="#">분실신고</a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $(function() {
+                    var leftValue = 0;
+                    var maxLeft = 0;
+                    setInterval(function() {
+                        maxLeft = -($(".imgs_wrap > ul").outerWidth() - $("#card_slide").outerWidth());
+                        if (leftValue <= maxLeft) {
+                            leftValue = maxLeft;
+                            $(".imgs_wrap > ul").css({
+                                left: leftValue
+                            });
+                        } else {
+                            $("#card_slide > .btn_next").css({
+                                backgroundImage: "url(img/icon_next.png)"
+                            });
+                        }
+                    }, 50);
+
+                    
+                    $("#card_slide > .btn_next").click(function() {
+                        $("#card_slide > .btn_prev").css({
+                            backgroundImage: "url(img/icon_prev.png)"
+                        });
+                        leftValue -= 265;
+                        
+                        if (leftValue <= maxLeft) {
+                            leftValue = maxLeft;
+                            $("#card_slide > .btn_next").css({
+                                backgroundImage: "url(img/icon_next.png)"
+                            });
+                        }
+                        
+                        $(".imgs_wrap > ul").css({
+                            left: leftValue
+                        });
+                    });
+
+                    $("#card_slide > .btn_prev").click(function() {
+                        $("#card_slide > .btn_next").css({
+                            backgroundImage: "url(img/icon_next.png)"
+                        });
+                        leftValue += 265;
+                        
+                        if (leftValue >= 0) {
+                            leftValue = 0;
+                            $("#card_slide > .btn_prev").css({
+                                backgroundImage: "url(img/icon_prev.png)"
+                            });
+                        }
+                        
+                        $(".imgs_wrap > ul").css({
+                            left: leftValue
+                        });
+                    });
+                });
+            </script>
+            <!--            card-->
+            <div class="finance">
+                <h3>금융</h3>
+                <ul>
+                    <li><a href="#">
+                            <h4>단기카드대출<br>(현금서비스)</h4>
+                            <p>언제 어디서나 쉽게 빠르게<br>한도내에서 필요한 만큼</p>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>장기카드대출<br>(카드론)</h4>
+                            <p>無방문 無보증 無서류<br>편리한 대출과 상환</p>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>일부결제금액이월약정<br>(리볼빙)</h4>
+                            <p>최저결제비율 ~ 100%<br>내 마음대로 선택</p>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>올인원 대출/신용대출</h4>
+                            <p>우리카드 없어도<br>24시간 이용가능한 대출</p>
+                        </a></li>
+                </ul>
+            </div>
+            <!--           finance-->
+        </div>
+        <!--        gray_box-->
+        <div class="darkgray_box">
+            <div class="card_section">
+                <div class="card01">
+                    <h4>라이프 스타일</h4>
+                    <ul class="slides">
+                        <input type="radio" name="radio-btn" id="img-1" checked />
+                        <li class="slide-container">
+                            <div class="slide">
+                                <p class="section" id="sec_01"></p>
+                                <a href="#"><button>
+                                        우리카드 여행몰<br>
+                                        바로가기
+                                    </button></a>
+                            </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn" id="img-2" />
+                        <li class="slide-container">
+                            <div class="slide">
+                                <p class="section" id="sec_02"></p>
+                                  <a href="#"><button>
+                                            해외이용안내<br>
+                                            바로가기
+                                        </button></a>
+                            </div>
+                        </li>
+                        <input type="radio" name="radio-btn" id="img-3" />
+                        <li class="slide-container">
+                            <div class="slide">
+                               <p class="section" id="sec_03"></p>
+                                <a href="#"><button>
+                                            위비마켓 렌탈서비스로
+                                            <br>
+                                            바로가기
+                                        </button></a>
+                            </div>
+                        </li>
+                        <li class="nav-dots">
+                            <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+                            <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+                            <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card02">
+                    <div id="card02_wrap">
+                        <h4>
+                            카드로바로바로<br>
+                            <strong>자동납부서비스</strong>
+                        </h4>
+                        <ul>
+                            <li><a href="#">
+                                    아파트관리비
+                                    <img src="img/btn_arrow.png" alt="arrow">
+                                </a></li>
+                            <li><a href="#">
+                                    임대료
+                                    <img src="img/btn_arrow.png" alt="arrow">
+                                </a></li>
+                            <li><a href="#">
+                                    전기요금
+                                    <img src="img/btn_arrow.png" alt="arrow">
+                                </a></li>
+                            <li><a href="#">
+                                    도시가스요금
+                                    <img src="img/btn_arrow.png" alt="arrow">
+                                </a></li>
+                            <li><a href="#">
+                                    4대사회보험
+                                    <img src="img/btn_arrow.png" alt="arrow">
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card03">
+                    <ul>
+                        <li>
+                            <h4>고객상담센터</h4>
+                        </li>
+                        <li>
+                            1588-9955<br>
+                            1599-9955
+                        </li>
+                        <li>
+                            카드간편신청<br>
+                            1599-0200
+                        </li>
+                        <li>
+                            금융서비스<br>
+                            1577-9000
+                        </li>
+                        <li>
+                            해외문의<br>
+                            82-2-6958-9000
+                        </li>
+                        <li>
+                            상담시간<br>
+                            09:00~18:00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="notice">
+            <div class="notice_wrap">
+                <div class="news">
+                    <a href="#">
+                        <h4>공지사항/새소식</h4>
+                    </a>
+                    <a href="#">
+                        코로나-19확산 예방조치에 따른
+                        <p>20.03.23</p>
+                    </a>
+                    <a href="#">
+                        코로나-19 피해 고객 지원 안내
+                        <p>20.03.21</p>
+                    </a>
+                    <a href="#">
+                        채권양도에 따른 개인(신용)정보
+                        <p>20.03.23</p>
+                    </a>
+                </div>
+                <div class="protection">
+                    <h4>금융소비자보호</h4>
+                    <div class="control_prev"></div>
+                    <div class="control_next"></div>
+                    <div id="slider">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/protection/protection01.jpg" alt="개인정보">
+                                    <p>
+                                        불법개인정보를 이용<br>
+                                        금융사기 유의사항 </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/protection/protection02.jpg" alt="신용카드업무">
+                                    <p>
+                                        궁금한 신용카드업무<br>
+                                        절차와 기준
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/protection/protection03.jpg" alt="핀테크">
+                                    <p>
+                                        핀테크지원센터,<br>
+                                        핀테크 생태계 활성화
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/protection/protection04.jpg" alt="정보포털">
+                                    <p>
+                                        금융소비자 정보포털<br>
+                                        파인(FINE)
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/protection/protection05.jpg" alt="보이스피싱">
+                                    <p>
+                                        대출빙자형 보이스피싱<br>
+                                        조심하세요
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="woori">
+                    <input checked="" type="radio" name="slider" id="slide1">
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+                    <div id="slides">
+                        <div id="overflow">
+                            <div class="inner">
+                                <div class="slide slide_1">
+                                    <div class="slide-content">
+                                        <span>
+                                            <strong>위비멤버스</strong><br>
+                                            돈되는 꿀머니
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="slide slide_2">
+                                    <div class="slide-content">
+                                        <span>
+                                            <strong>위비마켓</strong><br>
+                                            함께 만드는 쇼핑몰
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="slide slide_3">
+                                    <div class="slide-content">
+                                        <span>
+                                            <strong>스마트앱</strong><br>
+                                            편리한 카드생활
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="controls">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
+                    <div id="bullets">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    container-->
+    <footer>
+        <div class="footer_inner">
+            <ul>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">사회공헌</a></li>
+                <li><a href="#">영업점안내</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">개인신용정보관리보호</a></li>
+                <li><a href="#">고객정보취급방침</a></li>
+                <li><a href="#">ARS안내</a></li>
+            </ul>
+            <div class="sel_box">
+                <div id="select">
+                    <p>패밀리사이트</p>
+                </div>
+                <ul>
+                    <li><a href="#">우리금융지주</a></li>
+                    <li><a href="#">우리은행</a></li>
+                    <li><a href="#">우리에프아이에스</a></li>
+                    <li><a href="#">우리신용정보</a></li>
+                    <li><a href="#">우리미소금융재단</a></li>
+                    <li><a href="#">우리금융경영연구소</a></li>
+                    <li><a href="#">우리종합금융</a></li>
+                </ul>
+            </div>
+            <p>
+                <span>서울특별시 종로구 종로1길 50 더케이트윈타워 (주)우리카드</span>
+                <span>
+                    사업자등록번호 101-86-79070
+                </span>
+            </p>
+            <p id="copy">
+                COPYRIGHTS WOORICARD.ALL RIGHTS RESERVED.
+            </p>
+            <div class="woori_sns">
+                <a href="#"><img src="img/logo_nposter.png" alt="logo"></a>
+                <a href="#"><img src="img/logo_naverblog.png" alt="logo"></a>
+                <a href="#"><img src="img/logo_tstory.png" alt="logo"></a>
+                <a href="#"><img src="img/logo_facebook.png" alt="logo"></a>
+                <a href="#"><img src="img/logo_youtube.png" alt="logo"></a>
+            </div>
+            <img src="img/logo_woori_b.png" alt="logo">
+            <div id="wrap">
+                <div class="slider-wrap js-slider-wrap">
+                    <div class="slider js-slider">
+                        <div class="slider-inner js-slider-inner">
+                            <div class="slider-item js-slider-item"></div>
+                            <div class="slider-item js-slider-item"></div>
+                            <div class="slider-item js-slider-item"></div>
+                            <div class="slider-item js-slider-item"></div>
+                            <div class="slider-item js-slider-item"></div>
+                            <div class="slider-item js-slider-item"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(function() {
+                    (function() {
+                        var $sliderWrap = $('.js-slider-wrap');
+                        var $slider = $('.js-slider');
+                        var $sliderInner = $('.js-slider-inner');
+                        var $sliderItem = $('.js-slider-item');
+
+                        var sliderItemWidth = $sliderItem.outerWidth();
+                        var sliderItemHeight = $sliderItem.outerHeight();
+                        var sliderNum = $sliderItem.length;
+                        var sliderInnerWidth = sliderItemWidth * sliderNum;
+                        $('.slider').css('width', sliderItemWidth);
+                        $('.slider-inner').css('width', sliderInnerWidth);
+
+                        var sliderCurrent = 0;
+
+                        var sliding = function() {
+                            var arr = [];
+                            for (var i = 0; i < sliderNum; i++) {
+                                arr[i] = sliderItemWidth * i * -1;
+                            }
+                            $sliderInner.stop().animate({
+                                left: arr[sliderCurrent]
+                            });
+                        };
+
+                        $sliderWrap.append("<ul class='slider-move js-slider-move'><li class='slider-move-prev'><</li><li class='slider-move-next'>></li></ul>");
+                        var sliderMoveHeight = sliderItemHeight * -0.6;
+                        $('.slider-move > li').css('top', sliderMoveHeight);
+
+                        var sliderCurrentNavi = '';
+                        var arr = [];
+                        for (var i = 0; i < sliderNum; i++) {
+                            arr[i] = i + 1;
+                        }
+
+                        $('.slider-navi>li').eq(sliderCurrent).addClass('selected');
+                        $('.slider-move-prev').click(function() {
+                            if (sliderCurrent <= 0) {
+                                sliderCurrent = sliderNum - 1;
+                            } else {
+                                sliderCurrent--;
+                            }
+                            $('.slider-navi>li').removeClass('selected');
+                            $('.slider-navi>li').eq(sliderCurrent).addClass('selected');
+                            sliding();
+
+                            console.log();
+
+                        });
+
+                        $('.slider-move-next').click(function() {
+                            if (sliderCurrent >= sliderNum - 1) {
+                                sliderCurrent = 0;
+                            } else {
+                                sliderCurrent++;
+                            }
+                            sliding();
+                        });
+                    })();
+                });
+            </script>
+        </div>
+    </footer>
+    <!--    footer-->
+</body></html>

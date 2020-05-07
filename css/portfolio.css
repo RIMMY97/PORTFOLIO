@@ -1,153 +1,79 @@
 @import url(reset.css);
-@font-face { font-family: "AppleSDGothicNeoH"; src: url("../fonts/AppleSDGothicNeoH.ttf"); }
-@font-face { font-family: "AppleSDGothicNeoB"; src: url("../fonts/AppleSDGothicNeoB.ttf"); }
-@font-face { font-family: "AppleSDGothicNeoR"; src: url("../fonts/AppleSDGothicNeoR.ttf"); }
-@font-face { font-family: "AppleSDGothicNeoL"; src: url("../fonts/AppleSDGothicNeoL.ttf"); }
-@font-face { font-family: "AppleSDGothicNeoUL"; src: url("../fonts/AppleSDGothicNeoUL.ttf"); }
-body { font-family: "AppleSDGothicNeoR"; }
-
-::-webkit-scrollbar { width: 17px; }
-
-::-webkit-scrollbar-track { background-color: #F5F5F5; }
-
-::-webkit-scrollbar-thumb { background-color: #CBCFE8; border-radius: 50px; }
-
-::-webkit-scrollbar-thumb:hover { background-color: #858EC5; }
+html, body { width: 100%; font-family: "AppleSDGothicNeoR"; overflow-x: hidden; }
 
 .fixed .grid_wrap div { z-index: 300; width: 1px; height: 100vh; background-color: rgba(255, 26, 26, 0.5); position: fixed; top: 0; }
 .fixed .grid_wrap div:nth-child(1) { left: 4.7%; }
 .fixed .grid_wrap div:nth-child(2) { left: 32.8%; }
 .fixed .grid_wrap div:nth-child(3) { right: 4.7%; }
-.fixed .logo { position: fixed; width: 5vw; height: 5vw; background-color: #3B59EC; top: 5vw; left: 4.7vw; z-index: 500; }
-.fixed .logo.nav_on { background-color: #FF5E3D; }
-.fixed .logo h1 { text-align: center; font-size: 2vw; line-height: 5vw; color: #fff; font-family: "AppleSDGothicNeoH"; }
-.fixed .util { position: fixed; z-index: 500; right: 1.5%; bottom: 5%; }
+.fixed .logo { position: fixed; width: 80px; height: 80px; background-color: #3B59EC; top: 5vw; left: 4.7vw; z-index: 700; transition: 0.3s; }
+.fixed .logo.on { background-color: #FF5E3D; transition: all 0.5s; }
+.fixed .logo h1 { text-align: center; font-size: 26px; line-height: 80px; color: #fff; font-family: "AppleSDGothicNeoH"; }
+.fixed .util { position: fixed; z-index: 900; right: 1.5%; bottom: 5%; }
 .fixed .util ul li { margin-bottom: 80px; }
 .fixed .util ul li:nth-of-type(3) { margin-bottom: 0; }
 
-.menu_btn { position: fixed; top: 6vw; right: 4.7vw; cursor: pointer; z-index: 500; }
-.menu_btn div { width: 33px; height: 3px; background-color: #000; margin-bottom: 7px; }
-.menu_btn div:nth-child(2) { width: 26px; }
+nav { position: fixed; z-index: 700; width: 6vw; height: 100%; }
+nav ul { position: absolute; transform: rotate(-90deg); top: 100vh; left: 0; width: 100vh; height: 60px; transform-origin: 0 0; }
+nav ul li { display: inline-block; font-size: 28px; margin-left: 3vw; margin-top: 1.5vw; transition: 0.3s; }
+nav ul li a { color: #FF1A1A; font-family: "AppleSDGothicNeoH"; }
 
-.menu { display: none; position: fixed; width: 100%; height: 100vh; background-color: #3B59EC; z-index: 400; box-sizing: border-box; overflow-y: scroll; }
-.menu::-webkit-scrollbar { display: none; }
-.menu .menu_wrap { position: relative; width: 100vw; height: 100%; display: table; table-layout: fixed; box-sizing: content-box; }
-.menu .menu_wrap nav { position: absolute; width: 60%; height: 100%; box-sizing: border-box; overflow: hidden; padding: 0 20%; }
-.menu .menu_wrap nav .nav_wrap { position: relative; width: 100%; height: 100%; vertical-align: middle; display: flex; align-items: center; }
-.menu .menu_wrap nav .nav_wrap ul { position: absolute; }
-.menu .menu_wrap nav .nav_wrap ul li { line-height: 100px; }
-.menu .menu_wrap nav .nav_wrap ul li a { color: #fff; font-size: 80px; font-family: "AppleSDGothicNeoH"; }
-.menu .menu_wrap .menu_util { position: absolute; display: flex; vertical-align: middle; align-items: center; width: 40%; height: 100%; right: 0; }
-.menu .menu_wrap .menu_util .util_wrap { box-sizing: border-box; width: 100%; padding: 5%; }
-.menu .menu_wrap .menu_util .util_wrap h3 { font-size: 23px; font-family: "AppleSDGothicNeoB"; color: #fff; line-height: 50px; }
-.menu .menu_wrap .menu_util .util_wrap h3:nth-child(1) { color: #FFCA39; }
-.menu .menu_wrap .menu_util .util_wrap a { margin-right: 5%; }
+.mobile_nav { display: none; }
 
 .home { position: relative; overflow: hidden; width: 100%; }
-.home .title { width: 100%; position: relative; padding: 20% 0; left: 12%; z-index: 300; }
-.home .title h1 { font-size: 8vw; font-family: "AppleSDGothicNeoH"; color: #FF1A1A; }
+.home .title { width: 100%; position: relative; padding: 20% 0; left: 9.1%; z-index: 300; }
+.home .title h1 { font-size: 7.5vw; font-family: "AppleSDGothicNeoH"; color: #FF1A1A; }
 
-.slide_loop { position: relative; width: 100%; margin: 0 auto; overflow: hidden; padding-top: 10%; padding-bottom: 20%; }
-.slide_loop p { text-align: center; font-size: 30px; margin-bottom: 5%; font-family: "AppleSDGothicNeoB"; }
+.slide_loop { position: relative; width: 100%; margin: 0 auto; overflow: hidden; padding: 10% 0; }
 .slide_loop .loop_txt { width: 100%; -webkit-text-stroke: 1px #FF1A1A; color: transparent; }
 .slide_loop .loop_txt .loop_wrap { width: 100%; font-family: "AppleSDGothicNeoH"; transform: rotate(-3deg); }
 .slide_loop .loop_txt .loop_wrap .txt { width: 100%; will-change: transform; white-space: nowrap; text-align: center; flex-direction: row; display: flex; overflow: hidden; }
-.slide_loop .loop_txt .loop_wrap .txt h2 { font-size: 12vw; letter-spacing: 0.2rem; width: calc(); }
+.slide_loop .loop_txt .loop_wrap .txt h2 { font-size: 180px; letter-spacing: 0.2rem; transition: 0.3s; }
 .slide_loop .loop_txt .loop_wrap .publisher h2 { animation: loop_mirror 10s -10s linear infinite; }
-.slide_loop .loop_txt .loop_wrap .create h2 { animation: loop 17s -10s linear infinite; }
+.slide_loop .loop_txt .loop_wrap .create h2 { animation: loop 13s -10s linear infinite; }
 
-@keyframes loop { 0% { transform: translateX(0); }
-  to { transform: translateX(-100%); } }
-@keyframes loop_mirror { 0% { transform: translateX(-100%); }
-  to { transform: translateX(0); } }
 .content { position: relative; width: 100%; }
-.content .nav { display: none; position: fixed; top: 30vh; left: 4.7%; z-index: 600; }
-.content .nav li { margin-bottom: 30px; }
-.content .nav li:nth-of-type(3) { margin-bottom: 200px; }
-.content .nav li:nth-of-type(3) a { color: #FF1A1A; }
-.content .nav li.on { margin-bottom: 500px; }
-.content .nav li.on a { color: #FF1A1A; }
-.content .nav li.on:last-child { margin-bottom: 0; }
-.content .nav li a { font-size: 5vw; color: transparent; font-family: "AppleSDGothicNeoH"; -webkit-text-stroke: 1px #FF1A1A; }
-.content #about, .content #work { position: relative; margin-left: 32.8%; margin-right: 4.7%; }
-.content #about { height: 100vh; margin-bottom: 10vh; }
-.content #about .about_name01 h3, .content #about .about_name02 h3 { position: absolute; font-size: 7vw; font-family: "AppleSDGothicNeoH"; }
+.content #about, .content #work { position: relative; margin-left: 32.8%; margin-right: 4.7%; z-index: 500; }
+.content #about { height: 100vh; }
+.content #about .about_name01 h3, .content #about .about_name02 h3 { position: absolute; font-size: 7vw; font-family: "AppleSDGothicNeoH"; transition: 0.3s; }
 .content #about .about_name01 h3 { top: 15%; left: 15%; }
-.content #about .about_name02 h3 { top: 30%; left: 50%; }
+.content #about .about_name02 h3 { top: 25%; left: 50%; }
 .content #about .about_name_outline h3 { color: transparent; -webkit-text-stroke: 1px #FFCA39; z-index: 300; }
 .content #about .about_name_baseline h3 { color: #FFCA39; z-index: 5; }
-.content #about .about_circle { position: absolute; top: 10%; left: 50%; transform: translateX(-50%); z-index: 200; }
-.content #about .about_circle .bounce { animation: bounce 3s linear infinite; max-width: 300px; width: 100%; }
-.content #about .about_txtarea { position: relative; font-size: 1.1vw; top: 50%; width: 40%; margin-left: 50%; }
+.content #about .about_circle { position: absolute; top: 10%; left: 50%; transform: translateX(-50%); z-index: 200; transition: 0.3s; }
+.content #about .about_circle .bounce { animation: bounce 3s linear infinite; max-width: 250px; width: 100%; }
+.content #about .about_txtarea { position: relative; font-size: 20px; top: 50%; width: 40%; margin-left: 50%; transition: 0.3s; }
 .content #about .about_txtarea span { display: inline-block; color: #494949; font-family: "AppleSDGothicNeoUL"; margin-bottom: 25px; }
 .content #about .about_txtarea p { margin-bottom: 15px; }
-.content #work .work_txtarea { padding: 7.5% 0 10% 4%; }
-.content #work .work_txtarea ul li { display: inline-block; margin-right: 3%; font-size: 1.3vw; font-family: "AppleSDGothicNeoL"; cursor: pointer; }
-.content #work .work_txtarea ul li.on { font-family: "AppleSDGothicNeoB"; }
+.content #work { margin-bottom: 5%; }
 .content #work .work_pannel { position: relative; }
 .content #work .work_pannel .work_scroll_view { table-layout: fixed; display: table; margin-bottom: 5%; }
-.content #work .work_pannel .work_scroll_view .work_list { position: relative; display: table-cell; vertical-align: middle; }
-.content #work .work_pannel .work_scroll_view .work_list::after { content: ''; position: absolute; width: 28%; height: 10%; bottom: 14%; left: 50%; transform: translateX(-50%); box-shadow: 0 10px 80px 65px #000; opacity: 0.8; }
+.content #work .work_pannel .work_scroll_view .work_list { position: relative; display: table-cell; vertical-align: middle; width: 35%; }
 .content #work .work_pannel .work_scroll_view .work_list:nth-of-type(3), .content #work .work_pannel .work_scroll_view .work_list:nth-of-type(6) { margin-right: 0; }
-.content #work .work_pannel .work_scroll_view .work_list a { color: #fff; }
-.content #work .work_pannel .work_scroll_view .work_list a .work_view { position: relative; width: 19.5vw; height: 32vw; background: url(../img/work/sample.jpg) center/cover; z-index: 100; }
-.content #work .work_pannel .work_scroll_view .work_list a .work_view .category { position: absolute; text-align: right; font-size: 1vw; font-family: "AppleSDGothicNeoL"; line-height: 40px; top: 5%; right: 8%; }
-.content #work .work_pannel .work_scroll_view .work_list a .work_view .title { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 3vw; font-family: "AppleSDGothicNeoB"; text-align: center; width: 300px; }
-.content #contact { position: relative; width: 100%; height: 100vh; background-color: #FFCE2E; }
-.content #contact .contact_wrap { position: relative; height: 100vh; margin: 0 4.7% 0 32.8%; }
-.content #contact .contact_wrap img { position: absolute; top: 10%; left: 50%; transform: translateX(-50%); }
-.content #contact .contact_wrap form { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); float: left; width: 600px; overflow: hidden; }
-.content #contact .contact_wrap form input { background-color: rgba(255, 255, 255, 0.54); box-sizing: border-box; border: none; font-size: 1.2vw; font-family: "AppleSDGothicNeoB"; height: 50px; margin-bottom: 3%; padding: 0 15px; }
-.content #contact .contact_wrap form input::placeholder { color: #FF570C; }
-.content #contact .contact_wrap form #name { width: 35%; margin-right: 5%; float: left; }
-.content #contact .contact_wrap form #mail { width: 60%; float: left; }
-.content #contact .contact_wrap form #submit { width: 100%; height: 200px; padding: 20px 15px; background-color: rgba(255, 255, 255, 0.54); border: none; margin-bottom: 3%; font-size: 1.2vw; font-family: "AppleSDGothicNeoB"; color: #FF570C; }
-.content #contact .contact_wrap form #submit::placeholder { color: #FF570C; }
-.content #contact .contact_wrap form #send { width: 35%; color: #FF570C; text-align: left; }
-.content #contact .contact_wrap .copy { position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%); }
-.content #contact .contact_wrap .copy p { font-size: 0.8vw; font-family: "AppleSDGothicNeoUL"; }
-
-@keyframes bounce { 0% { transform: translateY(20px); }
-  50% { transform: translateY(0px); }
-  100% { transform: translateY(20px); } }
-@media screen and (max-width: 1239px) { .util { right: 0.5vw; }
-  .menu .menu_wrap nav { position: relative; width: 100%; padding: 5%; }
-  .menu .menu_wrap nav .nav_wrap { display: flex; width: 100%; }
-  .menu .menu_wrap .menu_util { position: relative; width: 100%; height: auto; bottom: 0; }
-  .menu .menu_wrap .menu_util .util_wrap { width: 100%; } }
-@media screen and (max-width: 767px) { .fixed .grid_wrap { z-index: -10; }
-  .fixed .logo { width: 10vw; height: 10vw; }
-  .fixed .logo h1 { font-size: 4vw; text-align: center; line-height: 10vw; }
-  .fixed .util { display: none; }
-  .menu_btn { top: 10vw; }
-  .menu .menu_wrap nav .nav_wrap ul { position: absolute; top: 20%; }
-  .menu .menu_wrap nav .nav_wrap ul li a { font-size: 60px; line-height: 20px; }
-  .menu .menu_wrap .menu_util .util_wrap h3 { font-size: 20px; }
-  .home .title { left: 4.2%; padding: 50% 0px; }
-  .home .title h1 { font-size: 10.7vw; }
-  .content .nav ul { display: none; }
-  .content #about, .content #work { width: 100%; margin: 0; }
-  .content #about { margin-bottom: 20vh; }
-  .content #about .about_name01 h3, .content #about .about_name02 h3 { font-size: 13vw; }
-  .content #about .about_name01 h3 { top: 18%; left: 8%; }
-  .content #about .about_name02 h3 { top: 25%; right: 20%; }
-  .content #about .about_txtarea { margin-left: 15%; font-size: 4vw; width: 70%; }
-  .content #work .work_txtarea { margin: 0 4.7%; }
-  .content #work .work_txtarea ul li { font-size: 4vw; }
-  .content #work .work_pannel .work_scroll_view { display: flex; flex-flow: wrap; margin-bottom: 0; }
-  .content #work .work_pannel .work_scroll_view .work_list { width: 100%; }
-  .content #work .work_pannel .work_scroll_view .work_list::after { display: none; }
-  .content #work .work_pannel .work_scroll_view .work_list a .work_view { width: 100%; height: 100vh; }
-  .content #work .work_pannel .work_scroll_view .work_list a .work_view .category { font-size: 3vw; }
-  .content #work .work_pannel .work_scroll_view .work_list a .work_view .title { font-size: 11vw; }
-  .content #contact { width: 100%; }
-  .content #contact .contact_wrap { margin: 0 4.7%; }
-  .content #contact .contact_wrap img { display: none; }
-  .content #contact .contact_wrap form { width: 100%; }
-  .content #contact .contact_wrap form input { font-size: 3.5vw; }
-  .content #contact .contact_wrap form #name, .content #contact .contact_wrap form #mail { width: 100%; }
-  .content #contact .contact_wrap form #submit { width: 100%; font-size: 3.5vw; }
-  .content #contact .contact_wrap .copy { bottom: 5%; }
-  .content #contact .contact_wrap .copy p { bottom: 5%; font-size: 3vw; } }
+.content #work .work_pannel .work_scroll_view .work_list a { color: #fff; display: block; width: 19.5vw; }
+.content #work .work_pannel .work_scroll_view .work_list a .work_01 { background: url(../img/work/work_01.jpg) center/cover; }
+.content #work .work_pannel .work_scroll_view .work_list a .work_02 { background: url(../img/work/work_02.jpg) center/cover; }
+.content #work .work_pannel .work_scroll_view .work_list a .work_03 { background: url(../img/work/work_03.jpg) center/cover; }
+.content #work .work_pannel .work_scroll_view .work_list a .work_04 { background: url(../img/work/work_04.jpg) center/cover; }
+.content #work .work_pannel .work_scroll_view .work_list a .work_05 { background: url(../img/work/work_05.jpg) center/cover; }
+.content #work .work_pannel .work_scroll_view .work_list a .work_06 { background: url(../img/work/work_06.jpg) center/cover; }
+.content #work .work_pannel .work_scroll_view .work_list a .work_view { position: relative; width: 19.5vw; height: 32vw; box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.301); z-index: 100; }
+.content #work .work_pannel .work_scroll_view .work_list a .work_view:hover .work_txt { display: block; }
+.content #work .work_pannel .work_scroll_view .work_list a .work_view .work_txt { display: none; position: relative; width: 100%; height: 100%; background: rgba(30, 30, 30, 0.5); }
+.content #work .work_pannel .work_scroll_view .work_list a .work_view .work_txt .category { position: absolute; text-align: right; font-size: 1vw; font-family: "AppleSDGothicNeoL"; line-height: 40px; top: 5%; right: 8%; }
+.content #work .work_pannel .work_scroll_view .work_list a .work_view .work_txt .title { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 3vw; font-family: "AppleSDGothicNeoB"; text-align: center; width: 300px; }
+.content #work .modal_air { display: none; position: fixed; z-index: 800; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0, 0, 0, 0.8); }
+.content #work .modal_air .modal-content { width: 80%; max-width: 1400px; display: block; margin: auto; padding-top: 5%; }
+.content #work .modal_air .close { position: fixed; top: 3vw; right: 3vw; color: #fff; font-size: 1.5vw; transition: 0.3s; }
+.content #work .modal_air .close:hover { color: #bbb; cursor: pointer; }
+.content #work .modal_clue { display: none; position: fixed; z-index: 800; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0, 0, 0, 0.8); }
+.content #work .modal_clue .modal-content { width: 80%; max-width: 1400px; display: block; margin: auto; padding-top: 5%; }
+.content #work .modal_clue .close_2 { position: fixed; top: 3vw; right: 3vw; color: #fff; font-size: 1.5vw; transition: 0.3s; }
+.content #work .modal_clue .close_2:hover { color: #bbb; cursor: pointer; }
+.content #contact { position: relative; width: 100%; height: 200px; background-color: #FFCE2E; }
+.content #contact #con_wrap { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.content #contact #con_wrap ul { display: flex; }
+.content #contact #con_wrap ul li { margin: 0 20px; }
+.content #contact #con_wrap span { display: block; margin-top: 20px; text-align: center; font-size: 22px; }
+.content #contact p { position: absolute; left: 50%; transform: translateX(-50%); bottom: 10%; font-size: 16px; font-family: "AppleSDGothicNeoL"; }
 
 /*# sourceMappingURL=portfolio.css.map */
